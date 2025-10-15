@@ -156,7 +156,7 @@ def run_sanity_checks(
     eps = 1e-6
     bin_size = int((cfg or {}).get("bin_size_minutes", 60))
 
-    # S1: schema & timestamps monotonic per case (approximate check on sort)
+    # S1: schema & timestamps monotonic per case 
     required = {"case_id", "activity", "resource", "timestamp"}
     missing = required - set(map(str, events_std.columns))
     s1_pass = (len(missing) == 0)
@@ -225,7 +225,7 @@ def save_sanity_report(results: pd.DataFrame,
 
 
 # -----------------------------------------------------------------------------
-# APPLICABILITY-INFERENCE (optional if transform doesn't return counts)
+# APPLICABILITY-INFERENCE 
 # -----------------------------------------------------------------------------
 
 def infer_applicability_from_events_std(events_std: pd.DataFrame) -> Dict[str, float]:
