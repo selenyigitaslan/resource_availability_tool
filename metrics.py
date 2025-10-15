@@ -257,7 +257,7 @@ def infer_applicability_from_events_std(events_std: pd.DataFrame) -> Dict[str, f
 
 
 # -----------------------------------------------------------------------------
-# STABILITY / REGULARITY HELPERS (from user; kept as-is with light guards)
+# STABILITY / REGULARITY HELPERS 
 # -----------------------------------------------------------------------------
 
 def stability_score(weekly_long: pd.DataFrame, resource: str) -> float:
